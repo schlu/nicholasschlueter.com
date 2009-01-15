@@ -6,7 +6,7 @@ set :scm, :git
 set :branch, "master"
  
 set :use_sudo, false
-set :deploy_to, "/u/app/nicholasschlueter"
+set :deploy_to, "/u/apps/nicholasschlueter"
  
 role :app, "nicholasschlueter.com"
 role :web, "nicholasschlueter.com"
