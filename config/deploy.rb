@@ -7,6 +7,7 @@ set :branch, "master"
  
 set :use_sudo, false
 set :deploy_to, "/u/apps/nicholasschlueter"
+ssh_options[:forward_agent] = true
  
 role :app, "nicholasschlueter.com"
 role :web, "nicholasschlueter.com"
@@ -15,5 +16,8 @@ role :db, "nicholasschlueter.com", :primary => true
 namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
+  end
+  task :after_symlink, :roles => :app do
+    run "ln -nfs #{shared_path}/data/production.sqlite3 #{current_path}/db/production.sqlite3"
   end
 end
