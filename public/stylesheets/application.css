@@ -1,0 +1,110 @@
+/* Thanks to Eric Meyer for this extremely useful css file */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+body {
+  background: #030306;
+  font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #AAA;
+}
+#wrapper {
+  margin:0 auto;
+  position:relative;
+  text-align:left;
+  width:900px;
+}
+.title {
+  margin-top: 15px;
+  text-align: justify;
+}
+#bio {
+  width:400px;
+  float:left;
+}
+
+#bio p {
+  margin-top: 15px;
+}
+
+ul {
+  margin-bottom: 15px;
+}
+#items {
+  width:360px;
+  padding-left: 40px;
+  float:left;
+  background: transparent url(images/margin.gif) repeat-y left top;
+}
+
+a, a:visited, a:link {
+  color: #FFFFFF;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CCC;
+}
+
+h2 {
+  font-size: 200%;
+}
+h1 {
+  font-size: 400%;
+  text-align: center;
+  height: 70px;
+  background: transparent url(images/top.png) no-repeat 400px bottom;
+}
+h3 {
+  font-size: 150%;
+  margin: 10px 0px;
+}
+ul {
+  margin-left:7px;
+  
+}

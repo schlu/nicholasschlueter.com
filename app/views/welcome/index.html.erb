@@ -1,0 +1,44 @@
+<div id="wrapper">
+  <h1>Nicholas Schlueter</h1>
+  <div id="bio">
+    <h2>Who is that?</h2>
+    <p>Hi, my name is Nicholas Schlueter.  I write software.</p>
+    
+    <h3>Projects</h3>
+    <ul>
+      <li>
+        <a href="http://ridecharge.com">RideCharge</a>
+        <ul>
+          <li>Senior Software Engineer Ruby</li>
+          <li>Lead iPhone developer of <a href="http://taximagic.com">Taxi Magic</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="http://dcrails.com">DCRails</a>
+        <ul>
+          <li>Website to help navigate the Washington DC Metrorail.</li>
+          <li>Or get the <a href="http://dcrails.com">iPhone client</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="http://qfip.net">Qflip</a>
+        <ul>
+          <li>Netflix Queue Randomization</li>
+          <li>RailsRumble 2008 - 2nd Place</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h3>Here is my current gravatar</h3>
+    <img src="http://www.gravatar.com/avatar/4da8c410c5012237a0d508b7688aadac.jpg?s=200" />
+  </div>
+  <div id="items">
+    <h2 id="theres_only_now">There is only now</h2>
+    <% @items.each do |item| %>
+      <div class="item">
+        <div class="title"><%= self.send(item.source + '_image') %>  <%= auto_link(item.title) %> <%= link_to "#", item.link, :class => "perma" %></div>
+        <%= render :partial => item.source, :locals => {:item => item} %>
+      </div>
+    <% end -%>
+  </div>
+</div>
