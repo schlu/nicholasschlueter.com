@@ -17,7 +17,8 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
   end
-  task :after_symlink, :roles => :app do
-    run "ln -nfs #{shared_path}/data/production.sqlite3 #{current_path}/db/production.sqlite3"
+  
+  task :after_update_code, :roles => :app do
+    run "ln -nfs #{shared_path}/data/production.sqlite3 #{current_release}/db/production.sqlite3"
   end
 end
