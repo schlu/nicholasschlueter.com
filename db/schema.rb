@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20090109154057) do
     t.string   "link"
     t.string   "image_url"
     t.string   "title"
-    t.string   "body"
+    t.text     "body"
     t.string   "source"
     t.datetime "published_at"
     t.datetime "created_at"
